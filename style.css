@@ -265,3 +265,33 @@ footer p{font-family:var(--ff-m);font-size:.7rem;color:var(--muted);letter-spaci
   footer{padding:2rem 1.5rem;flex-direction:column;gap:.5rem;text-align:center}
   .soc-grid{grid-template-columns:1fr 1fr}
 }
+
+.pc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* ajuste selon l'image */
+  display: block;
+  transition: transform .9s cubic-bezier(.25,.46,.45,.94);
+}
+
+.pc:hover .pc-img {
+  transform: scale(1.06);
+}
+/* ── PROJECT CARDS — liens & badges ─────────── */
+a.pc{text-decoration:none;color:inherit;display:block}
+.pc-link{cursor:none}
+.pc-soon{cursor:default}
+.pc-soon .pc-bg{filter:brightness(.7)}
+
+.pc-badge{
+  position:absolute;top:1.6rem;left:1.8rem;
+  font-family:var(--ff-m);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:.32rem .85rem;z-index:3;
+}
+.pc-badge--live{
+  background:var(--accent);color:var(--bg);
+}
+.pc-badge--soon{
+  background:transparent;border:1px solid rgba(245,242,237,.2);color:var(--muted);
+}
