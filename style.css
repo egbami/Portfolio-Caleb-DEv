@@ -281,17 +281,11 @@ footer p{font-family:var(--ff-m);font-size:.7rem;color:var(--muted);letter-spaci
 /* ── PROJECT CARDS — liens & badges ─────────── */
 a.pc{text-decoration:none;color:inherit;display:block}
 .pc-link{cursor:none}
-.pc-soon{cursor:default}
-.pc-soon .pc-bg{filter:brightness(.7)}
-
+.pc-soon .pc-bg{filter:brightness(.65)}
 .pc-badge{
-  position:absolute;top:1.6rem;left:1.8rem;
+  position:absolute;top:1.6rem;left:1.8rem;z-index:3;
   font-family:var(--ff-m);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:.32rem .85rem;z-index:3;
+  padding:.32rem .85rem;
 }
-.pc-badge--live{
-  background:var(--accent);color:var(--bg);
-}
-.pc-badge--soon{
-  background:transparent;border:1px solid rgba(245,242,237,.2);color:var(--muted);
-}
+.pc-badge--live{background:var(--accent);color:var(--bg)}
+.pc-badge--soon{background:transparent;border:1px solid rgba(245,242,237,.2);color:var(--muted)}
