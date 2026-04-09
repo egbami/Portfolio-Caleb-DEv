@@ -59,7 +59,7 @@ footer p{font-family:var(--ff-m);font-size:.7rem;color:var(--muted);letter-spaci
 /* ═══════════════════════════════════
    HOME
 ═══════════════════════════════════ */
-#hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem;}
+#hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem;overflow:hidden;}
 #hc{position:absolute;inset:0;z-index:0}
 .hero-inner{position:relative;z-index:2}
 .ht{font-family:var(--ff-d);font-size:clamp(52px,11.5vw,170px);font-weight:900;line-height:.92;letter-spacing:-.025em}

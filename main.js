@@ -174,12 +174,13 @@ function initAnimations() {
   }
 
   // ─ Hero PARALLAX
-  gsap.to('#ht1',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.2 }, y: -180, ease: 'none' });
-  gsap.to('#ht2',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1.6 }, y: -110, ease: 'none' });
-  gsap.to('#ht3',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2   }, y: -70,  ease: 'none' });
-  gsap.to('.tag',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 0.8 }, y: -240, opacity: 0, ease: 'none' });
-  gsap.to('.hbottom',{ scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1   }, y: -200, opacity: 0, ease: 'none' });
-  gsap.to('#hc',     { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2.5 }, y: 100, scale: 1.08, ease: 'none' });
+  const heroEnd = 'center top'; // le parallax s'arrête quand le milieu du hero atteint le top
+  gsap.to('#ht1',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 1.2 }, y: -80,  opacity: 0, ease: 'none' });
+  gsap.to('#ht2',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 1.6 }, y: -55,  opacity: 0, ease: 'none' });
+  gsap.to('#ht3',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 2   }, y: -35,  opacity: 0, ease: 'none' });
+  gsap.to('.tag',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 0.8 }, y: -100, opacity: 0, ease: 'none' });
+  gsap.to('.hbottom',{ scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 1   }, y: -90,  opacity: 0, ease: 'none' });
+  gsap.to('#hc',     { scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 2.5 }, y: 80, scale: 1.06, ease: 'none' });
 
   // ─ Marquee
   const mq = document.getElementById('mq');
