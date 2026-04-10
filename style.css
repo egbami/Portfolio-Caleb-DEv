@@ -278,6 +278,19 @@ footer p{font-family:var(--ff-m);font-size:.7rem;color:var(--muted);letter-spaci
 .pc:hover .pc-img {
   transform: scale(1.06);
 }
+/* ── LANG TOGGLE ─────────────────────────────── */
+.lang-toggle{
+  background:transparent;border:1px solid var(--border);
+  display:flex;align-items:center;gap:.35rem;
+  padding:.38rem .85rem;cursor:none;
+  font-family:var(--ff-m);font-size:.62rem;letter-spacing:.12em;
+  color:var(--muted);transition:border-color .3s;
+}
+.lang-toggle:hover{border-color:var(--accent)}
+.lang-sep{opacity:.3}
+.lang-opt{transition:color .25s;cursor:none}
+.lang-opt.active{color:var(--accent);font-weight:700}
+
 /* ── PROJECT CARDS — liens & badges ─────────── */
 a.pc{text-decoration:none;color:inherit;display:block}
 .pc-link{cursor:none}
@@ -289,3 +302,5 @@ a.pc{text-decoration:none;color:inherit;display:block}
 }
 .pc-badge--live{background:var(--accent);color:var(--bg)}
 .pc-badge--soon{background:transparent;border:1px solid rgba(245,242,237,.2);color:var(--muted)}
+.pc-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .9s cubic-bezier(.25,.46,.45,.94)}
+.pc:hover .pc-img{transform:scale(1.06)}

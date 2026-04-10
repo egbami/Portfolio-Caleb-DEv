@@ -174,7 +174,7 @@ function initAnimations() {
   }
 
   // ─ Hero PARALLAX
-  const heroEnd = 'center top'; // le parallax s'arrête quand le milieu du hero atteint le top
+  const heroEnd = 'center top';
   gsap.to('#ht1',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 1.2 }, y: -80,  opacity: 0, ease: 'none' });
   gsap.to('#ht2',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 1.6 }, y: -55,  opacity: 0, ease: 'none' });
   gsap.to('#ht3',    { scrollTrigger: { trigger: '#hero', start: 'top top', end: heroEnd, scrub: 2   }, y: -35,  opacity: 0, ease: 'none' });
@@ -401,3 +401,125 @@ initThree();
 initAnimations();
 initNavScroll();
 initMagnetic();
+
+// ── I18N ─────────────────────────────────────
+const translations = {
+  en: {
+    'nav.home':'Home','nav.about':'About','nav.blog':'Blog','nav.contact':'Contact',
+    'home.tag':'UI/UX Designer & Frontend Developer — Cotonou, Bénin',
+    'home.ht2':'DESIGNS','home.ht3':'THE WEB',
+    'home.desc':'Crafting digital experiences that live at the intersection of <em style="font-style:italic;color:var(--accent)">beauty</em> and function. Building for humans, worldwide.',
+    'home.scroll':'Scroll',
+    'home.proj.num':'01 — Selected Work','home.proj.title':'Projects<br>That Matter','home.proj.viewall':'View All',
+    'badge.live':'Live ↗','badge.soon':'Coming Soon',
+    'proj.aurum.cat':'Banking · Mobile App','proj.pulse.cat':'Health · Dashboard',
+    'proj.forge.cat':'Developer Tools · Web','proj.nomad.cat':'Travel · Booking Platform',
+    'stat.projects':'Projects<br>Completed','stat.clients':'Happy<br>Clients',
+    'stat.years':'Years of<br>Experience','stat.awards':'Design<br>Awards',
+    'home.about.num':'02 — Who I Am',
+    'home.about.title':'I bridge <em>beautiful design</em> and <em>functional code</em>',
+    'home.about.desc':"Every pixel, every interaction, every line of code serves a purpose. I don't just design screens — I craft experiences that resonate, convert, and endure long after launch.",
+    'home.about.cta':'More about me',
+    'home.cta.title':"<span>Let's</span><br><span class=\"out\">Create</span><br><span>Together</span>",
+    'home.cta.btn':'Start a Project',
+    'about.tag':'About me — The Designer Behind the Screen',
+    'about.hero':'I design digital<br>experiences that<br>feel <em>human</em>',
+    'about.s1.nav':'The Beginning','about.s2.nav':'The Growth','about.s3.nav':'The Vision',
+    'about.s1.title':'The Beginning',
+    'about.s1.desc':"Started as a self-taught designer with nothing but curiosity and a laptop. I fell in love with the idea that code and design together could create experiences that genuinely move people — not just look pretty, but feel alive and purposeful.",
+    'about.s2.title':'The Growth',
+    'about.s2.desc':"Three years in, I'd shipped products used by thousands across West Africa and beyond. Started specializing in the overlap between design and engineering — building design systems, crafting component libraries, bridging the gap that most teams struggle with daily.",
+    'about.s3.title':'The Vision',
+    'about.s3.desc':"Today I work with ambitious teams globally, bringing a uniquely holistic approach: I design it, and I build it. No handoff friction, no lost intent. Just experiences that work exactly as envisioned — from first concept to final deployment.",
+    'about.skills.num':'02 — Expertise','about.skills.title':'What I Do Best',
+    'about.tools.num':'03 — Arsenal','about.tools.title':'My Tools & Stack',
+    'about.vals.num':'04 — Philosophy','about.vals.title':'What I Believe In',
+    'val.1.t':'Craft over comfort','val.1.d':"Good enough is never good enough. Every detail deserves attention, every interaction deserves thought. The difference between okay and extraordinary lives in the details most people never notice — but always feel.",
+    'val.2.t':'Simplicity through complexity','val.2.d':"The hardest thing in design is making something complex feel simple. Real elegance isn't decoration — it's the ruthless elimination of everything that doesn't serve the user's core need.",
+    'val.3.t':'Design with empathy','val.3.d':"Behind every screen is a human with goals, fears, and limited time. My job is to understand that human deeply enough to build something they never want to leave.",
+    'val.4.t':'Ship, then perfect','val.4.d':"Perfection is a moving target. Ship something excellent, learn from real usage, then iterate relentlessly. The best products are never finished — they just keep getting better.",
+    'blog.tag':'Blog — Thoughts, Insights & Tutorials','blog.featured':'Featured',
+    'blog.feat.title':'Building a Design System That Developers Actually Love',
+    'blog.feat.btn':'Read Article',
+    'blog.nl.num':'05 — Stay Updated','blog.nl.btn':'Subscribe',
+    'contact.tag':"Get in Touch — Let's Build Something Great",
+    'contact.info.title':'Start a Conversation',
+    'contact.svc.num':'02 — Services','contact.svc.title':'What I Offer',
+    'contact.avail.num':'03 — Availability','contact.avail.title':"When I'm Available",
+    'contact.soc.num':'04 — Connect','contact.soc.title':'Find Me Online',
+    'form.send':'Send Message',
+  },
+  fr: {
+    'nav.home':'Accueil','nav.about':'À propos','nav.blog':'Blog','nav.contact':'Contact',
+    'home.tag':'Designer UI/UX & Développeur Frontend — Cotonou, Bénin',
+    'home.ht2':'CONÇOIT','home.ht3':'LE WEB',
+    'home.desc':'Créer des expériences digitales à la croisée de la <em style="font-style:italic;color:var(--accent)">beauté</em> et de la fonctionnalité. Pour les humains, partout dans le monde.',
+    'home.scroll':'Défiler',
+    'home.proj.num':'01 — Travaux Sélectionnés','home.proj.title':'Projets<br>Qui Comptent','home.proj.viewall':'Voir Tout',
+    'badge.live':'En ligne ↗','badge.soon':'Bientôt',
+    'proj.aurum.cat':'Banque · App Mobile','proj.pulse.cat':'Santé · Dashboard',
+    'proj.forge.cat':'Outils Dev · Web','proj.nomad.cat':'Voyage · Réservation',
+    'stat.projects':'Projets<br>Réalisés','stat.clients':'Clients<br>Satisfaits',
+    'stat.years':"Années<br>d'Expérience",'stat.awards':'Prix de<br>Design',
+    'home.about.num':'02 — Qui Suis-Je',
+    'home.about.title':'Je crée le pont entre un <em>beau design</em> et un <em>code fonctionnel</em>',
+    'home.about.desc':"Chaque pixel, chaque interaction, chaque ligne de code a un but. Je ne crée pas seulement des écrans — je forge des expériences qui résonnent, convertissent et perdurent bien après le lancement.",
+    'home.about.cta':'En savoir plus',
+    'home.cta.title':"<span>Créons</span><br><span class=\"out\">Ensemble</span><br><span>Quelque Chose</span>",
+    'home.cta.btn':'Démarrer un Projet',
+    'about.tag':"À propos — Le Designer Derrière l'Écran",
+    'about.hero':'Je conçois des expériences<br>digitales qui semblent<br><em>humaines</em>',
+    'about.s1.nav':'Les Débuts','about.s2.nav':'La Croissance','about.s3.nav':'La Vision',
+    'about.s1.title':'Les Débuts',
+    'about.s1.desc':"Autodidacte, j'ai commencé avec rien d'autre que de la curiosité et un ordinateur. J'ai vite compris que le code et le design ensemble pouvaient créer des expériences qui touchent vraiment les gens — pas seulement belles à regarder, mais vivantes et utiles.",
+    'about.s2.title':'La Croissance',
+    'about.s2.desc':"Trois ans plus tard, j'avais livré des produits utilisés par des milliers de personnes en Afrique de l'Ouest et au-delà. Spécialisation à l'intersection du design et de l'ingénierie — systèmes de design, bibliothèques de composants, combler le fossé que la plupart des équipes peinent à franchir.",
+    'about.s3.title':'La Vision',
+    'about.s3.desc':"Aujourd'hui je travaille avec des équipes ambitieuses à l'échelle mondiale, avec une approche holistique : je conçois et je code. Pas de friction au handoff, pas d'intention perdue. Juste des expériences qui fonctionnent exactement comme imaginées.",
+    'about.skills.num':'02 — Expertise','about.skills.title':'Ce Que Je Fais Le Mieux',
+    'about.tools.num':'03 — Arsenal','about.tools.title':'Mes Outils & Stack',
+    'about.vals.num':'04 — Philosophie','about.vals.title':'Ce En Quoi Je Crois',
+    'val.1.t':'Le soin avant le confort','val.1.d':"Le « assez bien » n'est jamais assez bien. Chaque détail mérite attention, chaque interaction mérite réflexion. La différence entre l'ordinaire et l'extraordinaire réside dans les détails que la plupart ne remarquent pas — mais ressentent toujours.",
+    'val.2.t':'La simplicité par la complexité','val.2.d':"La chose la plus difficile en design est de rendre quelque chose de complexe simple à utiliser. La vraie élégance n'est pas de la décoration — c'est l'élimination impitoyable de tout ce qui ne sert pas le besoin essentiel de l'utilisateur.",
+    'val.3.t':'Designer avec empathie','val.3.d':"Derrière chaque écran se trouve un être humain avec des objectifs, des craintes et peu de temps. Mon travail est de comprendre cet humain assez profondément pour construire quelque chose dont il ne veut plus se passer.",
+    'val.4.t':'Livrer, puis perfectionner','val.4.d':"La perfection est une cible mouvante. Livrez quelque chose d'excellent, apprenez de l'usage réel, puis itérez sans relâche. Les meilleurs produits ne sont jamais terminés — ils ne font que s'améliorer.",
+    'blog.tag':'Blog — Réflexions, Insights & Tutoriels','blog.featured':'À la Une',
+    'blog.feat.title':'Construire un Design System que les Développeurs Adorent Vraiment',
+    'blog.feat.btn':"Lire l'Article",
+    'blog.nl.num':'05 — Rester Informé','blog.nl.btn':"S'abonner",
+    'contact.tag':"Contactez-Moi — Construisons Quelque Chose",
+    'contact.info.title':'Démarrons une Conversation',
+    'contact.svc.num':'02 — Services','contact.svc.title':'Ce Que Je Propose',
+    'contact.avail.num':'03 — Disponibilité','contact.avail.title':'Quand Je Suis Disponible',
+    'contact.soc.num':'04 — Réseaux','contact.soc.title':'Me Retrouver En Ligne',
+    'form.send':'Envoyer le Message',
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t[el.dataset.i18nPh];
+    if (v !== undefined) el.placeholder = v;
+  });
+  document.querySelectorAll('.lang-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang;
+}
+
+const lt = document.getElementById('lang-toggle');
+if (lt) lt.addEventListener('click', e => {
+  const opt = e.target.closest('.lang-opt');
+  if (opt) applyLang(opt.dataset.lang);
+});
+
+applyLang(currentLang);

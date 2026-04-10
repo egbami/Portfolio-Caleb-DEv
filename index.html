@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +30,16 @@
 <nav id="nav">
   <a href="#" class="nav-logo" data-page="home">CALEB.</a>
   <ul class="nav-links">
-    <li><a href="#" data-page="home"    class="nav-link active">Home</a></li>
-    <li><a href="#" data-page="about"   class="nav-link">About</a></li>
-    <li><a href="#" data-page="blog"    class="nav-link">Blog</a></li>
-    <li><a href="#" data-page="contact" class="nav-link">Contact</a></li>
+    <li><a href="#" data-page="home"    class="nav-link active" data-i18n="nav.home">Home</a></li>
+    <li><a href="#" data-page="about"   class="nav-link" data-i18n="nav.about">About</a></li>
+    <li><a href="#" data-page="blog"    class="nav-link" data-i18n="nav.blog">Blog</a></li>
+    <li><a href="#" data-page="contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
   </ul>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+    <span class="lang-opt" data-lang="en">EN</span>
+    <span class="lang-sep">/</span>
+    <span class="lang-opt" data-lang="fr">FR</span>
+  </button>
 </nav>
 
 <!-- ══════════════════════════════════════════
@@ -46,15 +51,15 @@
   <section id="hero">
     <canvas id="hc"></canvas>
     <div class="hero-inner">
-      <div class="tag">UI/UX Designer & Frontend Developer — Cotonou, Bénin</div>
+      <div class="tag" data-i18n="home.tag">UI/UX Designer & Frontend Developer — Cotonou, Bénin</div>
       <h1 class="ht">
         <div class="ht-line"><span id="ht1">CALEB</span></div>
-        <div class="ht-line"><span id="ht2" class="out">DESIGNS</span></div>
-        <div class="ht-line"><span id="ht3">THE WEB</span></div>
+        <div class="ht-line"><span id="ht2" class="out" data-i18n="home.ht2">DESIGNS</span></div>
+        <div class="ht-line"><span id="ht3" data-i18n="home.ht3">THE WEB</span></div>
       </h1>
       <div class="hbottom">
         <p class="hdesc">Crafting digital experiences that live at the intersection of <em style="font-style:italic;color:var(--accent)">beauty</em> and function. Building for humans, worldwide.</p>
-        <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+        <div class="scroll-hint"><span data-i18n="home.scroll">Scroll</span><div class="scroll-line"></div></div>
       </div>
     </div>
   </section>
@@ -82,32 +87,22 @@
   <!-- 3. PROJECTS -->
   <section class="proj-sec">
     <div class="sec-head">
-      <div><div class="sec-num">01 — Selected Work</div><h2 class="sec-h">Projects<br>That Matter</h2></div>
-      <a href="#" class="more" data-page="about">View All <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
+      <div><div class="sec-num" data-i18n="home.proj.num">01 — Selected Work</div><h2 class="sec-h" data-i18n="home.proj.title">Projects<br>That Matter</h2></div>
+      <a href="#" class="more" data-page="about" data-i18n="home.proj.viewall">View All <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
     </div>
     <div class="pgrid">
-
-      <!-- 01 — AURUM -->
       <a href="https://aurum-banking-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="pc pc-link">
-        <div class="pc-bg">
-          <img src="assets/images/aurum.jpg" alt="Aurum — Fintech App" class="pc-img">
-        </div>
+        <div class="pc-bg"><img src="assets/images/aurum.jpg" alt="Aurum" class="pc-img"></div>
         <div class="pc-num">01</div>
-        <div class="pc-badge pc-badge--live">Live ↗</div>
-        <div class="pc-info"><div class="pc-cat">Banking · Mobile App</div><div class="pc-name">Aurum</div><div class="pc-yr">2025 — Fintech</div></div>
+        <div class="pc-badge pc-badge--live" data-i18n="badge.live">Live ↗</div>
+        <div class="pc-info"><div class="pc-cat" data-i18n="proj.aurum.cat">Banking · Mobile App</div><div class="pc-name">Aurum</div><div class="pc-yr">2025 — Fintech</div></div>
       </a>
-
-      <!-- 02 — PULSE -->
       <a href="https://pulse-sigma-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="pc pc-link">
-        <div class="pc-bg">
-          <img src="assets\images\Pulse.jpg" alt="Pulse — Health Platform" class="pc-img">
-        </div>
+        <div class="pc-bg"><img src="assets/images/pulse.png" alt="Pulse" class="pc-img"></div>
         <div class="pc-num">02</div>
-        <div class="pc-badge pc-badge--live">Live ↗</div>
-        <div class="pc-info"><div class="pc-cat">Health · Dashboard</div><div class="pc-name">Pulse</div><div class="pc-yr">2025 — HealthTech</div></div>
+        <div class="pc-badge pc-badge--live" data-i18n="badge.live">Live ↗</div>
+        <div class="pc-info"><div class="pc-cat" data-i18n="proj.pulse.cat">Health · Dashboard</div><div class="pc-name">Pulse</div><div class="pc-yr">2025 — HealthTech</div></div>
       </a>
-
-      <!-- 03 — FORGE (coming soon) -->
       <div class="pc pc-soon">
         <div class="pc-bg">
           <svg class="pc-vis" viewBox="0 0 300 260" fill="none">
@@ -120,38 +115,33 @@
           </svg>
         </div>
         <div class="pc-num">03</div>
-        <div class="pc-badge pc-badge--soon">Coming Soon</div>
-        <div class="pc-info"><div class="pc-cat">Developer Tools · Web</div><div class="pc-name">Forge</div><div class="pc-yr">2025 — DevTools</div></div>
+        <div class="pc-badge pc-badge--soon" data-i18n="badge.soon">Coming Soon</div>
+        <div class="pc-info"><div class="pc-cat" data-i18n="proj.forge.cat">Developer Tools · Web</div><div class="pc-name">Forge</div><div class="pc-yr">2025 — DevTools</div></div>
       </div>
-
-      <!-- 04 — NOMAD -->
       <a href="https://travel-ewurdpmvq-justs4857-3940s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="pc pc-link">
-        <div class="pc-bg">
-          <img src="assets/images/nomad.jpg" alt="Nomad — Travel App" class="pc-img">
-        </div>
+        <div class="pc-bg"><img src="assets/images/nomad.jpg" alt="Nomad" class="pc-img"></div>
         <div class="pc-num">04</div>
-        <div class="pc-badge pc-badge--live">Live ↗</div>
-        <div class="pc-info"><div class="pc-cat">Travel · Booking Platform</div><div class="pc-name">Nomad</div><div class="pc-yr">2025 — TravelTech</div></div>
+        <div class="pc-badge pc-badge--live" data-i18n="badge.live">Live ↗</div>
+        <div class="pc-info"><div class="pc-cat" data-i18n="proj.nomad.cat">Travel · Booking Platform</div><div class="pc-name">Nomad</div><div class="pc-yr">2025 — TravelTech</div></div>
       </a>
-
     </div>
   </section>
 
   <!-- 4. STATS -->
   <section class="stats-sec" id="stats">
-    <div class="stat"><div class="stat-n" data-target="23">0</div><div class="stat-l">Projects<br>Completed</div></div>
-    <div class="stat"><div class="stat-n" data-target="12">0</div><div class="stat-l">Happy<br>Clients</div></div>
-    <div class="stat"><div class="stat-n" data-target="5">0</div><div class="stat-l">Years of<br>Experience</div></div>
-    <div class="stat"><div class="stat-n" data-target="3">0</div><div class="stat-l">Design<br>Awards</div></div>
+    <div class="stat"><div class="stat-n" data-target="23">0</div><div class="stat-l" data-i18n="stat.projects">Projects<br>Completed</div></div>
+    <div class="stat"><div class="stat-n" data-target="12">0</div><div class="stat-l" data-i18n="stat.clients">Happy<br>Clients</div></div>
+    <div class="stat"><div class="stat-n" data-target="5">0</div><div class="stat-l" data-i18n="stat.years">Years of<br>Experience</div></div>
+    <div class="stat"><div class="stat-n" data-target="3">0</div><div class="stat-l" data-i18n="stat.awards">Design<br>Awards</div></div>
   </section>
 
   <!-- 5. ABOUT TEASER -->
   <section class="at-sec">
     <div class="at-text">
-      <div class="sec-num">02 — Who I Am</div>
-      <h2>I bridge <em>beautiful design</em> and <em>functional code</em></h2>
-      <p>Every pixel, every interaction, every line of code serves a purpose. I don't just design screens — I craft experiences that resonate, convert, and endure long after launch.</p>
-      <a href="#" class="btn btn-o" data-page="about"><span>More about me</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
+      <div class="sec-num" data-i18n="home.about.num">02 — Who I Am</div>
+      <h2 data-i18n="home.about.title">I bridge <em>beautiful design</em> and <em>functional code</em></h2>
+      <p data-i18n="home.about.desc">Every pixel, every interaction, every line of code serves a purpose. I don't just design screens — I craft experiences that resonate, convert, and endure long after launch.</p>
+      <a href="#" class="btn btn-o" data-page="about"><span data-i18n="home.about.cta">More about me</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
     </div>
     <div class="at-img">
       <div class="at-img-in">
@@ -169,8 +159,8 @@
 
   <!-- 6. CTA -->
   <section class="cta-sec">
-    <h2 class="cta-t"><span>Let's</span><br><span class="out">Create</span><br><span>Together</span></h2>
-    <a href="#" class="btn btn-p" data-page="contact"><span>Start a Project</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
+    <h2 class="cta-t" data-i18n="home.cta.title"><span>Let's</span><br><span class="out">Create</span><br><span>Together</span></h2>
+    <a href="#" class="btn btn-p" data-page="contact"><span data-i18n="home.cta.btn">Start a Project</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
   </section>
 
   <footer><p>© 2026 Caleb — UI/UX Designer & Frontend Developer</p><p>Working around the World 🌍</p></footer>
@@ -182,38 +172,38 @@
 <div id="page-about" class="page">
   <section class="ab-hero">
     <div style="position:relative;z-index:2">
-      <div class="tag">About me — The Designer Behind the Screen</div>
-      <h1>I design digital<br>experiences that<br>feel <em>human</em></h1>
+      <div class="tag" data-i18n="about.tag">About me — The Designer Behind the Screen</div>
+      <h1 data-i18n="about.hero">I design digital<br>experiences that<br>feel <em>human</em></h1>
     </div>
   </section>
 
   <section class="ab-story">
     <div class="story-nav">
-      <div class="sni on">The Beginning</div>
-      <div class="sni">The Growth</div>
-      <div class="sni">The Vision</div>
+      <div class="sni on" data-i18n="about.s1.nav">The Beginning</div>
+      <div class="sni" data-i18n="about.s2.nav">The Growth</div>
+      <div class="sni" data-i18n="about.s3.nav">The Vision</div>
     </div>
     <div>
       <div class="sb">
         <div class="sy">2019</div>
-        <h3>The Beginning</h3>
+        <h3 data-i18n="about.s1.title">The Beginning</h3>
         <p>Started as a self-taught designer with nothing but curiosity and a laptop. I fell in love with the idea that code and design together could create experiences that genuinely move people — not just look pretty, but feel alive and purposeful.</p>
       </div>
       <div class="sb">
         <div class="sy">2021</div>
-        <h3>The Growth</h3>
+        <h3 data-i18n="about.s2.title">The Growth</h3>
         <p>Three years in, I'd shipped products used by thousands across West Africa and beyond. Started specializing in the overlap between design and engineering — building design systems, crafting component libraries, bridging the gap that most teams struggle with daily.</p>
       </div>
       <div class="sb">
         <div class="sy">2026</div>
-        <h3>The Vision</h3>
+        <h3 data-i18n="about.s3.title">The Vision</h3>
         <p>Today I work with ambitious teams globally, bringing a uniquely holistic approach: I design it, and I build it. No handoff friction, no lost intent. Just experiences that work exactly as envisioned — from first concept to final deployment.</p>
       </div>
     </div>
   </section>
 
   <section class="skills-sec">
-    <div class="sec-num">02 — Expertise</div><h2 class="sec-h" style="margin-top:.5rem">What I Do Best</h2>
+    <div class="sec-num" data-i18n="about.skills.num">02 — Expertise</div><h2 class="sec-h" style="margin-top:.5rem" data-i18n="about.skills.title">What I Do Best</h2>
     <div class="sg">
       <div class="skcat">
         <h3>Design</h3>
@@ -240,7 +230,7 @@
   </section>
 
   <section class="tools-sec">
-    <div class="sec-num">03 — Arsenal</div><h2 class="sec-h" style="margin-top:.5rem">My Tools & Stack</h2>
+    <div class="sec-num" data-i18n="about.tools.num">03 — Arsenal</div><h2 class="sec-h" style="margin-top:.5rem" data-i18n="about.tools.title">My Tools & Stack</h2>
     <div class="tg">
       <div class="ti"><span class="ti-ic">🎨</span><div class="ti-n">Figma</div></div>
       <div class="ti"><span class="ti-ic">⚛️</span><div class="ti-n">React</div></div>
@@ -258,12 +248,12 @@
   </section>
 
   <section class="vals-sec">
-    <div class="sec-num">04 — Philosophy</div><h2 class="sec-h" style="margin-top:.5rem;margin-bottom:0">What I Believe In</h2>
+    <div class="sec-num" data-i18n="about.vals.num">04 — Philosophy</div><h2 class="sec-h" style="margin-top:.5rem;margin-bottom:0" data-i18n="about.vals.title">What I Believe In</h2>
     <div class="vl">
-      <div class="vi"><div class="vi-n">01</div><div class="vi-t">Craft over comfort</div><div class="vi-d">Good enough is never good enough. Every detail deserves attention, every interaction deserves thought. The difference between okay and extraordinary lives in the details most people never notice — but always feel.</div></div>
-      <div class="vi"><div class="vi-n">02</div><div class="vi-t">Simplicity through complexity</div><div class="vi-d">The hardest thing in design is making something complex feel simple. Real elegance isn't decoration — it's the ruthless elimination of everything that doesn't serve the user's core need.</div></div>
-      <div class="vi"><div class="vi-n">03</div><div class="vi-t">Design with empathy</div><div class="vi-d">Behind every screen is a human with goals, fears, and limited time. My job is to understand that human deeply enough to build something they never want to leave.</div></div>
-      <div class="vi"><div class="vi-n">04</div><div class="vi-t">Ship, then perfect</div><div class="vi-d">Perfection is a moving target. Ship something excellent, learn from real usage, then iterate relentlessly. The best products are never finished — they just keep getting better.</div></div>
+      <div class="vi"><div class="vi-n">01</div><div class="vi-t" data-i18n="val.1.t">Craft over comfort</div><div class="vi-d">Good enough is never good enough. Every detail deserves attention, every interaction deserves thought. The difference between okay and extraordinary lives in the details most people never notice — but always feel.</div></div>
+      <div class="vi"><div class="vi-n">02</div><div class="vi-t" data-i18n="val.2.t">Simplicity through complexity</div><div class="vi-d">The hardest thing in design is making something complex feel simple. Real elegance isn't decoration — it's the ruthless elimination of everything that doesn't serve the user's core need.</div></div>
+      <div class="vi"><div class="vi-n">03</div><div class="vi-t" data-i18n="val.3.t">Design with empathy</div><div class="vi-d">Behind every screen is a human with goals, fears, and limited time. My job is to understand that human deeply enough to build something they never want to leave.</div></div>
+      <div class="vi"><div class="vi-n">04</div><div class="vi-t" data-i18n="val.4.t">Ship, then perfect</div><div class="vi-d">Perfection is a moving target. Ship something excellent, learn from real usage, then iterate relentlessly. The best products are never finished — they just keep getting better.</div></div>
     </div>
   </section>
   <footer><p>© 2026 Caleb — UI/UX Designer & Frontend Developer</p><p>Working around the World 🌍</p></footer>
@@ -275,14 +265,14 @@
 <div id="page-blog" class="page">
   <section class="bl-hero">
     <div>
-      <div class="tag">Blog — Thoughts, Insights & Tutorials</div>
+      <div class="tag" data-i18n="blog.tag">Blog — Thoughts, Insights & Tutorials</div>
       <h1><span>DESIGN</span><br><span class="out">NOTES</span></h1>
     </div>
   </section>
 
   <section class="feat-post">
     <div class="feat-img">
-      <div class="feat-bdg">Featured</div>
+      <div class="feat-bdg" data-i18n="blog.featured">Featured</div>
       <svg viewBox="0 0 600 450" fill="none" style="width:100%;height:100%">
         <defs><radialGradient id="fg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(200,255,62,.14)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
         <rect width="600" height="450" fill="url(#fg1)"/>
@@ -295,9 +285,9 @@
     </div>
     <div>
       <div class="pmeta">Design Systems · 12 min read · Nov 2025</div>
-      <h2 class="pt-title">Building a Design System That Developers Actually Love</h2>
+      <h2 class="pt-title" data-i18n="blog.feat.title">Building a Design System That Developers Actually Love</h2>
       <p class="pexc">Most design systems fail not because of bad design, but because of poor handoff. Here's how to build a system that bridges the designer-developer divide and actually gets used in production.</p>
-      <a href="#" class="btn btn-p"><span>Read Article</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
+      <a href="#" class="btn btn-p"><span data-i18n="blog.feat.btn">Read Article</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></a>
     </div>
   </section>
 
@@ -355,12 +345,12 @@
   </section>
 
   <section class="nl-sec">
-    <div class="sec-num">05 — Stay Updated</div>
+    <div class="sec-num" data-i18n="blog.nl.num">05 — Stay Updated</div>
     <h2>Get the Good Stuff<br><em style="font-style:italic;color:var(--accent)">Delivered Weekly</em></h2>
     <p style="color:var(--muted);margin-top:.8rem;font-size:.85rem">No spam. Just deep dives on design, code, and the intersection of both.</p>
     <div class="nl-form">
       <input type="email" class="nl-inp" placeholder="your@email.com">
-      <button class="btn btn-p" style="border-radius:0"><span>Subscribe</span></button>
+      <button class="btn btn-p" style="border-radius:0"><span data-i18n="blog.nl.btn">Subscribe</span></button>
     </div>
   </section>
   <footer><p>© 2026 Caleb — UI/UX Designer & Frontend Developer</p><p>Working around the World 🌍</p></footer>
@@ -372,14 +362,14 @@
 <div id="page-contact" class="page">
   <section class="ct-hero">
     <div style="position:relative;z-index:2">
-      <div class="tag">Get in Touch — Let's Build Something Great</div>
+      <div class="tag" data-i18n="contact.tag">Get in Touch — Let's Build Something Great</div>
       <h1>LET'S<br><span class="out">WORK</span><br>TOGETHER</h1>
     </div>
   </section>
 
   <section class="ct-form-sec">
     <div class="ci">
-      <h3>Start a Conversation</h3>
+      <h3 data-i18n="contact.info.title">Start a Conversation</h3>
       <p>Have a project in mind? Looking for a collaborator? Just want to say hello? My inbox is always open and I respond within 24 hours.</p>
       <div class="cd"><div class="cd-l">Email</div><div class="cd-v">justs4857@gmail.com</div></div>
       <div class="cd"><div class="cd-l">Location</div><div class="cd-v">Cotonou, Bénin 🌍</div></div>
@@ -395,13 +385,13 @@
       <div class="fg"><label class="fl">Email Address</label><input type="email" name="email" class="fi" placeholder="john@company.com" required></div>
       <div class="fg"><label class="fl">Subject</label><input type="text" name="subject" class="fi" placeholder="Project collaboration, Freelance work..."></div>
       <div class="fg"><label class="fl">Message</label><textarea class="fta" name="message" placeholder="Tell me about your project, timeline, budget..." required></textarea></div>
-      <button type="submit" class="btn btn-p" style="align-self:flex-start"><span id="send-txt">Send Message</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></button>
+      <button type="submit" class="btn btn-p" style="align-self:flex-start"><span id="send-txt" data-i18n="form.send">Send Message</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M8 2l6 6-6 6"/></svg></button>
     </form>
   </section>
 
   <section class="svc-sec">
     <div>
-      <div class="sec-num">02 — Services</div><h2 class="sec-h" style="margin-top:.5rem;font-size:clamp(1.5rem,2.8vw,3rem)">What I Offer</h2>
+      <div class="sec-num" data-i18n="contact.svc.num">02 — Services</div><h2 class="sec-h" style="margin-top:.5rem;font-size:clamp(1.5rem,2.8vw,3rem)" data-i18n="contact.svc.title">What I Offer</h2>
       <div style="margin-top:2rem">
         <div class="svc-card"><div class="svc-price">Starting from $3,000</div><div class="svc-title">UI/UX Design</div><div class="svc-desc">Research, wireframes, prototypes, full Figma design & handoff</div></div>
         <div class="svc-card"><div class="svc-price">Starting from $5,000</div><div class="svc-title">Full-Stack Frontend</div><div class="svc-desc">Design + build with React, Next.js, animations & deployment</div></div>
@@ -409,7 +399,7 @@
       </div>
     </div>
     <div>
-      <div class="sec-num">03 — Availability</div><h2 class="sec-h" style="margin-top:.5rem;font-size:clamp(1.5rem,2.8vw,3rem)">When I'm Available</h2>
+      <div class="sec-num" data-i18n="contact.avail.num">03 — Availability</div><h2 class="sec-h" style="margin-top:.5rem;font-size:clamp(1.5rem,2.8vw,3rem)" data-i18n="contact.avail.title">When I'm Available</h2>
       <div style="margin-top:2rem">
         <div class="avail-row"><span class="avail-q"> Monday - Friday</span><span class="avail-s on">● Available</span></div>
         <div class="avail-row"><span class="avail-q"> 09am - 5pm</span><span class="avail-s on">● Available</span></div>
@@ -420,7 +410,7 @@
   </section>
 
   <section class="soc-sec">
-    <div class="sec-num">04 — Connect</div><h2 class="sec-h" style="margin-top:.5rem">Find Me Online</h2>
+    <div class="sec-num" data-i18n="contact.soc.num">04 — Connect</div><h2 class="sec-h" style="margin-top:.5rem" data-i18n="contact.soc.title">Find Me Online</h2>
     <div class="soc-grid">
       <a href="#" class="soc-a"><div><div class="soc-name">Dribbble</div><div class="soc-handle">@caleb.design</div></div><div class="soc-arr">↗</div></a>
       <a href="https://www.linkedin.com/in/caleb-messohounsounou-2376743b1/" target="_blank" rel="noopener noreferrer" class="soc-a"><div><div class="soc-name">LinkedIn</div><div class="soc-handle">in/caleb-messohounsounou</div></div><div class="soc-arr">↗</div></a>
